@@ -2,7 +2,7 @@
 
 This is a Node.js application that implements a multi-turn chat interface using Google's Gemini AI model. It allows users to have interactive conversations with the Gemini AI model through a command-line interface.
 
-The chat session object that maintains conversational context across multiple .sendMessage() calls. "history" key is array of messages which helps gemini internall in keepin track.
+![image](https://github.com/user-attachments/assets/f993e05e-284b-4abf-a3d8-dec1212d2a85)
 
 ## Features
 
