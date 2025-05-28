@@ -1,0 +1,17 @@
+{
+  "name": "gemini-multi-turn-chat",
+  "version": "1.0.0",
+  "main": "gemini_chat.js",
+  "scripts": {
+    "start": "node gemini_chat.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.5.0",
+    "readline-sync": "^1.4.10"
+  }
+}
