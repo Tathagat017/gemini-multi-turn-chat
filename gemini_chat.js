@@ -52,11 +52,13 @@ async function runChat() {
     history: [],
     systemInstruction: {
       role: "user",
-      parts: [{ text: "You are a helpful and concise assistant." }],
+      parts: [
+        { text: "You are a helpful and concise assistant called HelpBot." },
+      ],
     },
   });
 
-  console.log("\nGemini Chat Initialized. Type 'exit' or 'quit' to end.");
+  console.log("\nHelpBot Chat Initialized. Type 'exit' or 'quit' to end.");
   console.log("----------------------------------------------------");
 
   let turnCount = 0;
@@ -75,7 +77,7 @@ async function runChat() {
     }
 
     if (!userInput.trim()) {
-      console.log("Gemini: Please enter some text.");
+      console.log("HelpBot: Please enter some text.");
       turnCount--; // Don't count empty input as a turn
       continue;
     }
@@ -84,7 +86,7 @@ async function runChat() {
       const result = await chat.sendMessage(userInput);
       const response = result.response;
       lastGeminiResponse = response.text();
-      console.log("Gemini:", lastGeminiResponse);
+      console.log("HelpBot:", lastGeminiResponse);
     } catch (error) {
       console.error("Error communicating with Gemini API:", error.message);
       if (error.response && error.response.promptFeedback) {
